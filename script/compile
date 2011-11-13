@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mkdir -p out
+cp -r static/images static/videos static/notes static/js out/
+compass compile static/
+coffee -c -b -o out/js/ static/cs/app.coffee 
+haml views/index.haml > out/index.html
+

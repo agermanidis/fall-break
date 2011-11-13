@@ -1,0 +1,9 @@
+static/videos
+static/notes
+static/js/app.js
+static/js/ga.js
+static/stylesheets
+static/video-thumbnails/
+static/images
+static/.sass-cache
+.DS_Store

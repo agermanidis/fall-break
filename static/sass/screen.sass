@@ -1,0 +1,119 @@
+/*
+  Welcome to Compass.
+  In this file you should write your main styles. (or centralize your imports)
+  Import this file using the following HTML or equivalent:
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+@import compass/reset
+@import compass/css3
+
+body
+  background: lighten(black, 10)
+
+#wrapper
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  background: black
+  
+#viewer
+  position: fixed
+  min-height: 90%
+  max-height: 90%
+  min-width: 100%
+
+video
+  position: fixed
+  display: none
+  z-index: 0
+
+.unpositioned
+  display: none
+
+#progress_text
+  position: relative
+  top: +50px
+  color: white
+
+#tutorial
+  position: fixed
+  min-width: 300px
+  min-height: 170px
+  background: black
+  right: 10px
+  bottom: 0
+  position: fixed
+  display: none
+
+#tutorialScreen video
+  position: absolute
+
+#skipTutorialButton
+  position: absolute
+  top: 0px
+  right: 0px
+  font-size: 11px
+  color: black
+  z-index: 9999999
+  cursor: pointer
+
+#keysLink
+  position: fixed
+  z-index: 9999999
+  top: -5px
+  right: 10px
+  color: white
+  font-family: 'Droid Serif', serif
+  font-size: 10px
+  background: black
+  padding:
+    top: 10px
+    left: 5px
+    right: 5px
+    bottom: 5px
+  +border-radius(5px)
+  cursor: pointer
+  display: none
+  //text-shadow
+
+#keys
+  position: fixed
+  left: 15%
+  right: 15%
+  top: 10%
+  bottom: 30%
+  display: none
+  z-index: 9999999
+  cursor: pointer
+
+#keyboard
+  position: absolute
+
+
+#closeButton
+  cursor: pointer
+  position: absolute
+  top: -15px
+  right: 50px
+  z-index: 99999999
+
+
+#footer
+  font-family: 'Droid Serif', serif
+  font-size: 15px
+  color: darken(white, 10)
+  position: absolute
+  right: 0
+  bottom: 0
+  padding-right: 20px
+  padding-bottom: 10px
+  a
+    color: darken(white, 20)
+    underline: none
+    &:hover
+      color: darken(white, 20)
+    &:link
+      underline: none
+

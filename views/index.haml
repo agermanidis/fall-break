@@ -1,0 +1,33 @@
+!!!
+%html
+  %head
+    - ["screen", "positioning", "splash"].each do |css_file|
+      %link{:rel => "stylesheet", :type => "text/css", :href => "stylesheets/#{css_file}.css"}
+    %title Fall Break
+  %body
+    #wrapper
+      #splash_screen
+        #progress_bar
+          #progress
+          %p{:id => "progress_text"} 0/18
+      #viewer
+        - 1.upto(17) do |id|
+          %video{:id => "video#{id}", :loop => "loop"}
+            %source{:src => "videos/s#{id}.ogv"}
+            %source{:src => "videos/s#{id}.m4v"}
+      #sound_engine
+        - ['C_low', 'C_sharp_low', 'D_low', 'D_sharp_low', 'E_low', 'F', 'F_sharp', 'G', 'G_sharp', 'A', 'A_sharp', 'B', 'C_high','C_sharp_high', 'D_high', 'D_sharp_high', 'E_high'].each do |note|
+          %audio{:src => "notes/#{note}.wav", :id => "#{note}_prototype_wav"}
+          %audio{:src => "notes/#{note}.mp3", :id => "#{note}_prototype_mp3"}
+  #tutorial
+    %button{:id => "skipTutorialButton"} X
+    #tutorialScreen
+      - 1.upto(4) do |id|
+        %video{:id => "tutorial_video#{id}", :loop => "loop"}
+          %source{:src => "videos/t#{id}.ogv"}
+          %source{:src => "videos/t#{id}.m4v"}
+  #keysLink KEYS
+  #keys
+    %img{:id => "keyboard", :src => "images/mackeyboard.jpg"}
+  - ["jquery-1.6.4.min", "underscore-min", "ga", "app"].each do |js_file|
+    %script{:src => "js/#{js_file}.js"}
